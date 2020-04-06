@@ -30,7 +30,10 @@ class Basic(commands.Cog):
             mapping = [('I AM',''), ("I'M",''), ('IM','')]
             #message.author
             for k, v in mapping:
-                l = l.replace(k, v)
+                c = l.replace(k, v, 1)
+                if len(c) < len(l):
+                    l = c
+                    break
             if len(l) == 0:
                 await message.channel.send("Hi no name, I'm Stove!")
                 await message.author.edit(nick="no name")
@@ -40,7 +43,6 @@ class Basic(commands.Cog):
             else:
                 await message.channel.send('Hi ' + message.content[-len(l):] + ", I'm Dr. Bot!")
                 await message.author.edit(nick="{}".format(message.content[-len(l):]))
-        #print(message.author.id)
 
     #Commands
     @commands.command()
