@@ -35,7 +35,7 @@ class Basic(commands.Cog):
                 await message.channel.send("Hi no name, I'm Stove!")
                 await message.author.edit(nick="no name")
             elif len(l) > 31:
-                await message.channel.send("Hi " +  message.content[-len(l):20] + ", I'm Stove!")
+                await message.channel.send("Hi " +  message.content[-len(l):31] + ", I'm Stove!")
                 await message.author.edit(nick="{}".format(message.content[-len(l):31]))            
             else:
                 await message.channel.send('Hi' + message.content[-len(l):] + ", I'm Dr. Bot!")
