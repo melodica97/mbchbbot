@@ -28,7 +28,7 @@ class Basic(commands.Cog):
         if message.content.upper().startswith('I AM') or message.content.upper().startswith("I'M") or message.content.upper().startswith("IM"):
             l = message.content.upper()
             mapping = [('I AM',''), ("I'M",''), ('IM','')]
-            message.author
+            #message.author
             for k, v in mapping:
                 l = l.replace(k, v)
             if len(l) == 0:
@@ -38,7 +38,7 @@ class Basic(commands.Cog):
                 await message.channel.send("Hi " +  message.content[-len(l):31] + ", I'm Stove!")
                 await message.author.edit(nick="{}".format(message.content[-len(l):31]))            
             else:
-                await message.channel.send('Hi' + message.content[-len(l):] + ", I'm Dr. Bot!")
+                await message.channel.send('Hi ' + message.content[-len(l):] + ", I'm Dr. Bot!")
                 await message.author.edit(nick="{}".format(message.content[-len(l):]))
         #print(message.author.id)
 
