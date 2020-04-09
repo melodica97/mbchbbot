@@ -80,6 +80,11 @@ class Basic(commands.Cog):
     async def ppsize(self, ctx, member: discord.Member):
         print(member.id)
         await ctx.send('The size of your pp is: {}cm'.format((random.uniform(1,6))))
+    
+    @commands.command()
+    async def brainsize(self, ctx, member: discord.Member):
+        print(member.id)
+        await ctx.send('The size of your brain is: {}cm³'.format((random.uniform(1000,1400))))
 
 def setup(client):
     client.add_cog(Basic(client))
