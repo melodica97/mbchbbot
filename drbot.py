@@ -5,7 +5,9 @@ Created on Sat Apr  4 22:40:42 2020
 @author: steve
 """
 import discord
+import token
 from discord.ext import commands
+import os
 print(discord.__version__)
 
 import os
@@ -30,4 +32,4 @@ for filename in os.listdir(r'./cogs'):
     if filename.endswith('.py'):
         client.load_extension('cogs.{}'.format(filename[:-3]))
 
-client.run('Njk2MTYyMTEwMTQ4NzA2Mzg0.XoktiQ.yAecUP9kTYJe7YzwZsoEHdbi9Fo')
+client.run(os.getenv('TOKEN'))
