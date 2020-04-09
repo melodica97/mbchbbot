@@ -25,7 +25,7 @@ class Basic(commands.Cog):
         if message.author == self.client.user:
             pass
         
-        if message.content.upper().startswith('I AM') or message.content.upper().startswith("I'M") or message.content.upper().startswith("IM"):
+        if message.content.upper().startswith('I AM ') or message.content.upper().startswith("I'M ") or message.content.upper().startswith("IM "):
             l = message.content.upper()
             mapping = [('I AM',''), ("I'M",''), ('IM','')]
             #message.author
